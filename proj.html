@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Projects Section</title>
+       <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "Poppins";
+        }
+
+        body {
+            background: #ffffff;
+            color: #0b284a;
+        }
+
+        .projects-section {
+            text-align: center;
+            padding: 80px 20px;
+        }
+
+        .projects-title {
+            font-size: 36px;
+            font-weight: 700;
+            margin-bottom: 50px;
+            color: #0b284a;
+        }
+
+        .projects-wrapper {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            align-items: center;
+        }
+
+        .top-projects {
+            display: flex;
+            gap: 20px;
+        }
+
+        .top-projects .project-card {
+            width: 537px;
+            height: 330px;
+        }
+
+        .bottom-projects {
+            display: grid;
+            grid-template-columns: repeat(4, 260px);
+            gap: 20px;
+        }
+
+        .bottom-projects .project-card {
+            width: 260px;
+            height: 375px;
+        }
+
+        /* CARD BASE STYLE */
+        .project-card {
+            position: relative;
+            border-radius: 0;
+            overflow: hidden;
+            cursor: pointer;
+        }
+
+        .project-card img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: 0.4s ease;
+        }
+
+        .project-info {
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 100%;
+            width: 100%;
+            background: #0b284a;
+            color: white;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 25px;
+            transform: translateY(100%);
+            transition: 0.4s ease;
+        }
+
+        .project-card:hover .project-info {
+            transform: translateY(0);
+        }
+
+        .project-card:hover img {
+            transform: scale(1.1);
+            filter: blur(3px);
+        }
+
+        .project-info h3 {
+            font-size: 22px;
+            font-weight: 700;
+            margin-bottom: 12px;
+        }
+
+        .project-info p {
+            font-size: 14px;
+            line-height: 1.5;
+            opacity: 0.9;
+        }
+
+
+        @media (max-width: 1200px) {
+            .bottom-projects {
+                grid-template-columns: repeat(2, 260px);
+            }
+        }
+
+        @media (max-width: 900px) {
+            .top-projects {
+                flex-direction: column;
+            }
+            .top-projects .project-card {
+                width: 100%;
+            }
+        }
+
+        @media (max-width: 600px) {
+            .bottom-projects {
+                grid-template-columns: 1fr;
+            }
+            .bottom-projects .project-card,
+            .top-projects .project-card {
+                width: 100%;
+            }
+        }
+
+    </style>
+</head>
+<body>
+
+<div class="projects-section">
+    <h2 class="projects-title">MY PROJECTS</h2>
+
+    <div class="projects-wrapper">
+
+        <div class="top-projects">
+            <div class="project-card">
+                <img src="ngl.png" alt="">
+                <div class="project-info">
+                    <h3>NGL UI</h3>
+                    <p>App Used: VS Code, WAMP<br>Tools Used: HTML, CSS, JS, PHP<br>New Learnings: Database</p>
+                </div>
+            </div>
+
+            <div class="project-card">
+                <img src="non.png" alt="">
+                <div class="project-info">
+                    <h3>E-Commerce</h3>
+                    <p>App Used: Vscode<br>Tools Used: HTML, CSS, JS<br>New Learnings: Grid</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="bottom-projects">
+            <div class="project-card">
+                <img src="tik.jpg" alt="">
+                <div class="project-info">
+                    <h3>Tiktok UI</h3>
+                    <p>App Used: Spck Editor<br>Tools Used: HTML, CSS<br>New Learnings: UI</p>
+                </div>
+            </div>
+
+            <div class="project-card">
+                <img src="fb.jpg" alt="">
+                <div class="project-info">
+                    <h3>Facebook UI</h3>
+                    <p>App Used: SPCK<br>Tools Used: HTML, CSS<br>New Learnings: None</p>
+                </div>
+            </div>
+
+            <div class="project-card">
+                <img src="note.jpg" alt="">
+                <div class="project-info">
+                    <h3>Note App</h3>
+                    <p>App Used: Spck Editor<br>Tools Used: HTML, CSS, JS<br>New Learnings: Logic</p>
+                </div>
+            </div>
+
+            <div class="project-card">
+                <img src="rps.jpg" alt="">
+                <div class="project-info">
+                    <h3>RPS</h3>
+                    <p>App Used: Spck Editor<br>Tools Used: HTML, CSS, JS<br>New Learnings: None</p>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+</body>
+</html>
