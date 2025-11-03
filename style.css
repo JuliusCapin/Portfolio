@@ -3,7 +3,16 @@
   margin: 0;
   padding: 0;
 }
+html, body {
+  max-width: 100%;
+  overflow-x: hidden;
+}
 
+
+/* Optional: catch hidden overflow inside sections */
+section, header, footer, .page-container, .main {
+  overflow-x: hidden;
+}
 .u a {
   text-decoration: none;
   font-family: 'Poppins', sans-serif;
@@ -721,3 +730,4 @@ body {
         textarea::-webkit-scrollbar {
             display: none;
         }
+
